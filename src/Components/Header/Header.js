@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import MusicNoteSharpIcon from "@material-ui/icons/MusicNoteSharp";
-import { SiDiscogs } from "react-icons/Si";
+import { SiDiscogs } from "react-icons/si";
 // import "./header.css";
 
 import List from "../VideoList/VideoList";
@@ -34,11 +34,27 @@ export default () => {
     <Wrapper>
       <HeadWrapper>
         <ContentWrapper>
+          <Icon>
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="heart"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 496 512"
+            >
+              <path
+                fill="red"
+                d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM88 256H56c0-105.9 86.1-192 192-192v32c-88.2 0-160 71.8-160 160zm160 96c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z"
+              ></path>
+            </svg>
+          </Icon>
           <Head>
             Melo
             <MusicNoteSharpIcon />
           </Head>
-          <div className="">
+          <div>
             <SearchBox>
               <InputBox
                 className=" "
@@ -70,7 +86,27 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
+const heart = keyframes`
+0% {
+        transform: rotate(0deg);
+      }
+      /* 25% {
+        transform: scale(1.05);
+      } */
+      50% {
+        transform:  rotate(180deg);
+      }
+      /* 75% {
+        transform: scale(1.05);
+      }*/
+      100% {
+        transform: rotate(360deg);
+      } 
+`;
 
+const Icon = styled.div`
+  animation: ${heart} 1.8s infinite;
+`;
 const HeadWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -86,6 +122,8 @@ const ContentWrapper = styled.div`
 const Head = styled.div`
   font-size: 2rem;
   padding-top: 1rem;
+  /* display: flex; */
+  /* flex-direction: row; */
 `;
 
 const SearchBox = styled.div`

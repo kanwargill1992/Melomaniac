@@ -152,7 +152,7 @@ export default class videolist extends Component {
               >
                 Search Result
               </h4>
-              <div className="row ">
+              <div>
                 {this.props.searchSongData.map((ob, i) => (
                   <CardWrapper key={i}>
                     <div className="wrapper">
@@ -183,7 +183,6 @@ export default class videolist extends Component {
                           <div className="play_btn">
                             <PlayCircleFilledWhiteIcon
                               className="fa-play-circle"
-                              style={{ fontsize: "40px" }}
                               onClick={() =>
                                 this.props.fetchSongId(ob.id, ob.title)
                               }
@@ -265,9 +264,8 @@ export default class videolist extends Component {
                 {
                   musicSrc: this.state.playerSongUrl,
                   name: this.state.playerSongTitle,
-                  cover:
-                    "https://cdn.pixabay.com/photo/2012/04/13/20/45/record-33583_960_720.png",
-                  singer: "India",
+                  cover: "https://unsplash.com/photos/FZWivbri0Xk",
+                  singer: "Kanwar",
                 },
               ]}
               customDownloader={this.customDownloader}
@@ -328,6 +326,7 @@ export default class videolist extends Component {
 // };
 const CardWrapper = styled.div`
   width: 20rem;
+  display: grid;
 `;
 const Img = styled.img`
   width: 15rem;

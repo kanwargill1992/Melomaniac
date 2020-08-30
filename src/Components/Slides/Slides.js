@@ -103,7 +103,7 @@ export default class slides extends Component {
                       <div className="play_btn">
                         <PlayCircleFilledWhiteIcon
                           className="fa-play-circle"
-                          style={{ fontsize: "40px" }}
+                          fontsize="large"
                           onClick={() =>
                             this.props.fetchSongId(ob.id, ob.title)
                           }
