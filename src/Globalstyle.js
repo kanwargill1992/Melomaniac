@@ -4,16 +4,16 @@ const GlobalStyle = createGlobalStyle`
   * {
     padding: 0;
     margin: 0;
-    font-family: 'Quattrocento Sans', sans-serif;
+    font-family: 'Caveat', cursive;
     box-sizing: border-box;
   }
 
   h1 {
-    font-family: 'Quattrocento', serif;
+    font-family: 'Caveat', cursive;
   }
   
   h2, h3 {
-    font-family:  'Quattrocento Sans', sans-serif;
+    font-family: 'Caveat', cursive;
   }
 
   a {
@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     
     &:hover {
-      background: #2b3b4a;
+      background: #00c9ff;
       color: white;
     }
   }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import MusicNoteSharpIcon from "@material-ui/icons/MusicNoteSharp";
+import { SiDiscogs } from "react-icons/Si";
 // import "./header.css";
 
 import List from "../VideoList/VideoList";

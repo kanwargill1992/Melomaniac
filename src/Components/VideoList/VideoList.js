@@ -6,12 +6,12 @@ import {
   getHollywoodSongs,
   getGhazalList,
 } from "../API/Youtube";
-
+import PlayCircleFilledWhiteIcon from "@material-ui/icons/PlayCircleFilledWhite";
 import Slide from "../Slides/Slides";
 import styled from "styled-components";
 import ReactPlayer from "react-jinke-music-player";
 import Loader from "react-loader-spinner";
-
+import "./Videos.css";
 import "react-jinke-music-player/assets/index.css";
 
 export default class videolist extends Component {
@@ -140,12 +140,12 @@ export default class videolist extends Component {
   render() {
     return (
       <div>
-        <div className="mt-3 mb-5">
+        <div>
           {this.props.searchSongData.length !== 0 ? (
-            <div className="container">
+            <div>
               <h4
                 style={{
-                  borderBottom: "#7f67ea solid 5px ",
+                  borderBottom: "#00BFFF solid 5px ",
                   display: "inline-block",
                   padding: 3,
                 }}
@@ -154,25 +154,57 @@ export default class videolist extends Component {
               </h4>
               <div className="row ">
                 {this.props.searchSongData.map((ob, i) => (
-                  <div
-                    key={i}
-                    className="col-lg-4 col-xs-12 col-sm-6"
-                    style={{ textAlign: "center" }}
-                  >
-                    {/* <!-- Card --> */}
-                    <div className="card m-2 searchcard p-2">
-                      {/* <!-- Card image --> */}
-                      <div className="view overlay">
+                  <CardWrapper key={i}>
+                    <div className="wrapper">
+                      <div className="main_card">
+                        <div className="card_left">
+                          <div className="card_datails">
+                            <h1>{ob.title}</h1>
+
+                            <div className="card_cat"></div>
+                            <p className="disc"></p>
+
+                            <div className="social-btn">
+                              <button
+                                className="btn "
+                                onClick={() =>
+                                  this.props.fetchSongId(ob.id, ob.title)
+                                }
+                              >
+                                Play
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="card_right">
+                          <div className="img_container">
+                            <Img src={ob.imgurl} alt="" />
+                          </div>
+                          <div className="play_btn">
+                            <PlayCircleFilledWhiteIcon
+                              className="fa-play-circle"
+                              style={{ fontsize: "40px" }}
+                              onClick={() =>
+                                this.props.fetchSongId(ob.id, ob.title)
+                              }
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* <div className="wrapper">
+                      
+                      <div className="main_card">
                         <img src={ob.imgUrl} className="card-img-top" />
                       </div>
 
-                      {/* <!-- Card content --> */}
+                      
                       <div className="card-body">
-                        {/* <!-- Title --> */}
+                        
                         <h6 className="card-title" style={{ fontWeight: 600 }}>
                           {ob.title}
                         </h6>
-                        {/* <!-- Text --> */}
+                       
                       </div>
 
                       <button
@@ -187,9 +219,8 @@ export default class videolist extends Component {
                       >
                         Play
                       </button>
-                    </div>
-                    {/* <!-- Card --> */}
-                  </div>
+                    </div> */}
+                  </CardWrapper>
                 ))}
               </div>
             </div>
@@ -295,3 +326,9 @@ export default class videolist extends Component {
 //   getPopular();
 //   return <div>Hello</div>;
 // };
+const CardWrapper = styled.div`
+  width: 20rem;
+`;
+const Img = styled.img`
+  width: 15rem;
+`;

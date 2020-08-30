@@ -103,6 +103,7 @@ export default class slides extends Component {
                       <div className="play_btn">
                         <PlayCircleFilledWhiteIcon
                           className="fa-play-circle"
+                          style={{ fontsize: "40px" }}
                           onClick={() =>
                             this.props.fetchSongId(ob.id, ob.title)
                           }
@@ -116,17 +117,7 @@ export default class slides extends Component {
           </Slicker>
         ) : (
           <div>
-            <div className="d-flex justify-content-center">
-              {/* <div
-                className="spinner-border"
-                role="status"
-                style={{ width: "2em", height: "2em" }}
-              >
-                <span className="sr-only">Loading...</span>
-              </div> */}
-              <Loader type="Audio" color="#92fe9d" height={80} width={80} />
-              {/* <span className="ml-2">Loading</span> */}
-            </div>
+            <Loader type="Audio" color="#92fe9d" height={80} width={80} />
           </div>
         )}
       </Wrapper>
@@ -161,9 +152,9 @@ const Wrapper = styled.div`
 `;
 
 const Img = styled.img`
-  width: 5rem;
+  width: 15rem;
 `;
 
 const CardWrapper = styled.div`
-  border: solid thin black;
+  width: 20rem;
 `;
