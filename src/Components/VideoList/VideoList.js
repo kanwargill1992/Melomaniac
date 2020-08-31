@@ -264,7 +264,8 @@ export default class videolist extends Component {
                 {
                   musicSrc: this.state.playerSongUrl,
                   name: this.state.playerSongTitle,
-                  cover: "https://unsplash.com/photos/FZWivbri0Xk",
+                  cover:
+                    "https://cdn.pixabay.com/photo/2012/04/13/20/45/record-33583_960_720.png",
                   singer: "Kanwar",
                 },
               ]}

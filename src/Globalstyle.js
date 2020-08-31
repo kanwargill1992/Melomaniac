@@ -4,16 +4,16 @@ const GlobalStyle = createGlobalStyle`
   * {
     padding: 0;
     margin: 0;
-    font-family: 'Caveat', cursive;
+    font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
   }
 
   h1 {
-    font-family: 'Caveat', cursive;
+    font-family: 'Rubik', sans-serif;
   }
   
   h2, h3 {
-    font-family: 'Caveat', cursive;
+    font-family: 'Rubik', sans-serif;
   }
 
   a {
