@@ -6,7 +6,7 @@ import {
   getHollywoodSongs,
   getGhazalList,
 } from "../API/Youtube";
-import PlayCircleFilledWhiteIcon from "@material-ui/icons/PlayCircleFilledWhite";
+import { AiFillPlayCircle } from "react-icons/ai";
 import Slide from "../Slides/Slides";
 import styled from "styled-components";
 import ReactPlayer from "react-jinke-music-player";
@@ -145,7 +145,6 @@ export default class videolist extends Component {
             <div>
               <h4
                 style={{
-                  borderBottom: "#00BFFF solid 5px ",
                   display: "inline-block",
                   padding: 3,
                 }}
@@ -181,7 +180,8 @@ export default class videolist extends Component {
                             <Img src={ob.imgurl} alt="" />
                           </div>
                           <div className="play_btn">
-                            <PlayCircleFilledWhiteIcon
+                            <AiFillPlayCircle
+                              size={60}
                               className="fa-play-circle"
                               onClick={() =>
                                 this.props.fetchSongId(ob.id, ob.title)
@@ -227,7 +227,7 @@ export default class videolist extends Component {
           <Slide
             fetchSongId={this.getSongData}
             data={this.state.gazal}
-            title={"Babbu Maan"}
+            title={"Tech House"}
           />
 
           {this.state.playsong === true ? (

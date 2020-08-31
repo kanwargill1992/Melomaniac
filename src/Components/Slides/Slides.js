@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import PlayCircleFilledWhiteIcon from "@material-ui/icons/PlayCircleFilledWhite";
+import { AiFillPlayCircle } from "react-icons/ai";
 import Slicker from "react-slick";
 import Loader from "react-loader-spinner";
 import "./Slides.css";
@@ -101,9 +101,9 @@ export default class slides extends Component {
                         <Img src={ob.imgurl} alt="" />
                       </div>
                       <div className="play_btn">
-                        <PlayCircleFilledWhiteIcon
+                        <AiFillPlayCircle
+                          size={60}
                           className="fa-play-circle"
-                          fontsize="large"
                           onClick={() =>
                             this.props.fetchSongId(ob.id, ob.title)
                           }

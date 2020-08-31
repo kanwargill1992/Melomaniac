@@ -54,7 +54,7 @@ export default () => {
 
   return (
     <div>
-      <h1>
+      <Head>
         Melo{" "}
         <AnimateOnChange durationOut={500}>
           <Wrapper
@@ -70,14 +70,15 @@ export default () => {
             </WordWrapper>
           </Wrapper>
         </AnimateOnChange>
-      </h1>
+      </Head>
       <h1 className="hidden-text" ref={nextTextRef} />
     </div>
   );
 };
 
 const Wrapper = styled.div`
-  /* width: 30px; */
+  color: white;
+  font-size: 1.3rem;
 
   .container {
     display: inline-block;
@@ -86,7 +87,6 @@ const Wrapper = styled.div`
     transition: all 200ms cubic-bezier(0.2, 1, 0.2, 1);
 
     &:after {
-      z-index: 100;
       background-color: #fff;
       content: "";
       position: absolute;
@@ -111,7 +111,5 @@ const WordWrapper = styled.div`
 `;
 
 const Head = styled.h1`
-  position: absolute;
-  top: -999px;
-  left: -999px;
+  color: white;
 `;

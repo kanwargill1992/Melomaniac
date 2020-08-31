@@ -1,7 +1,7 @@
 import youtubeSearch from "simple-youtube-api";
 
-const API_KEY = "AIzaSyCLcupFcD0r3cnej5i-JSKozCoqVkkel1E";
-
+const API_KEY = "";
+// AIzaSyCLcupFcD0r3cnej5i-JSKozCoqVkkel1E
 export const getPopularList = async () => {
   const ob = new youtubeSearch(API_KEY);
 
@@ -35,7 +35,7 @@ export const getHollywoodSongs = async () => {
 export const getGhazalList = async () => {
   const ob = new youtubeSearch(API_KEY);
 
-  var data = await ob.searchVideos("babbu+maan", 5).catch((e) => {
+  var data = await ob.searchVideos("tech+house", 5).catch((e) => {
     console.log(e);
   });
 

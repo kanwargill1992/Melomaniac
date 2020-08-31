@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Animation from "./Animation";
-import { AiFillGithub } from "react-icons/ai";
 
 export default () => {
   return (
@@ -9,8 +8,6 @@ export default () => {
       <FootWrapper>
         <Animation />
       </FootWrapper>
-      <div>hello</div>
-      <AiFillGithub />
     </Footer>
   );
 };

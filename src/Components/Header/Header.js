@@ -49,7 +49,7 @@ export default () => {
         </Head>
 
         <FormWrapper>
-          <form onSubmit="event.preventDefault()" className="search-form">
+          <div onSubmit="event.preventDefault()" className="search-form">
             <input
               id="search"
               type="search"
@@ -65,7 +65,7 @@ export default () => {
             <button className="search-button" onClick={() => searchSong()}>
               Search
             </button>
-          </form>
+          </div>
         </FormWrapper>
       </ContentWrapper>
       <List searchSongData={searchSongData} />
