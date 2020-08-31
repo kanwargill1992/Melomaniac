@@ -75,14 +75,11 @@ export default class slides extends Component {
           <Slicker {...settings}>
             {this.props.data.map((ob, i) => (
               <CardWrapper key={i}>
-                <div className="wrapper">
+                <div className="wrapper popular">
                   <div className="main_card">
                     <div className="card_left">
                       <div className="card_datails">
-                        <h1>{ob.title}</h1>
-
-                        <div className="card_cat"></div>
-                        <p className="disc"></p>
+                        <h3>{ob.title}</h3>
 
                         <div className="social-btn">
                           <button

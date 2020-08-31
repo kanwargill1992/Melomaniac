@@ -25,7 +25,7 @@ export const getBollywoodLongSongs = async () => {
 export const getHollywoodSongs = async () => {
   const ob = new youtubeSearch(API_KEY);
 
-  var data = await ob.searchVideos("boris+brejha", 10).catch((e) => {
+  var data = await ob.searchVideos("boris+brejha", 5).catch((e) => {
     console.log(e);
   });
 
@@ -45,7 +45,7 @@ export const getGhazalList = async () => {
 export const getSearchData = async (query) => {
   const ob = new youtubeSearch(API_KEY);
 
-  var data = await ob.searchVideos(query + " song", 10).catch((e) => {
+  var data = await ob.searchVideos(query + " song", 3).catch((e) => {
     console.log(e);
   });
 
