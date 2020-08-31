@@ -5,7 +5,7 @@ const API_KEY = "";
 export const getPopularList = async () => {
   const ob = new youtubeSearch(API_KEY);
 
-  var data = await ob.searchVideos("techno+house", 5).catch((e) => {
+  const data = await ob.searchVideos("techno+house", 5).catch((e) => {
     console.log(e);
   });
 
@@ -15,7 +15,7 @@ export const getPopularList = async () => {
 export const getBollywoodLongSongs = async () => {
   const ob = new youtubeSearch(API_KEY);
 
-  var data = await ob.searchVideos("eric+prydz", 5).catch((e) => {
+  const data = await ob.searchVideos("eric+prydz", 5).catch((e) => {
     console.log(e);
   });
 
@@ -25,7 +25,7 @@ export const getBollywoodLongSongs = async () => {
 export const getHollywoodSongs = async () => {
   const ob = new youtubeSearch(API_KEY);
 
-  var data = await ob.searchVideos("boris+brejha", 5).catch((e) => {
+  const data = await ob.searchVideos("boris+brejha", 5).catch((e) => {
     console.log(e);
   });
 
@@ -35,7 +35,7 @@ export const getHollywoodSongs = async () => {
 export const getGhazalList = async () => {
   const ob = new youtubeSearch(API_KEY);
 
-  var data = await ob.searchVideos("tech+house", 5).catch((e) => {
+  const data = await ob.searchVideos("tech+house", 5).catch((e) => {
     console.log(e);
   });
 
@@ -45,7 +45,7 @@ export const getGhazalList = async () => {
 export const getSearchData = async (query) => {
   const ob = new youtubeSearch(API_KEY);
 
-  var data = await ob.searchVideos(query + " song", 3).catch((e) => {
+  const data = await ob.searchVideos(query + " song", 3).catch((e) => {
     console.log(e);
   });
 

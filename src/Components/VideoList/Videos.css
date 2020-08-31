@@ -61,18 +61,6 @@
   transition: 300ms ease-in-out;
 }
 
-/* .disc {
-    font-weight: 100;
-    line-height: 27px;
-  }
-  a {
-    color: darkcyan;
-    display: block;
-    text-decoration: none;
-  }
-  .social-btn {
-    margin-left: -10px;
-  } */
 button {
   color: #fff;
   border: none;
@@ -124,7 +112,6 @@ button:hover {
   }
   10% {
     transform: scale(1.8);
-    /* -webkit-transform: scale2); */
     opacity: 0;
   }
 }

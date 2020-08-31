@@ -36,7 +36,6 @@ export default class videolist extends Component {
       await this.getHollywoodSongs();
       await this.getGazals();
     } catch (e) {
-      //window.location.reload();
       setTimeout(() => {
         window.location.reload();
         clearTimeout();
@@ -134,7 +133,7 @@ export default class videolist extends Component {
 
   customDownloader = () => {
     const link = document.createElement("a");
-    link.href = this.state.playerSongUrl; // a.mp3
+    link.href = this.state.playerSongUrl;
     link.download = "test";
     document.body.appendChild(link);
     link.click();
@@ -269,7 +268,7 @@ export default class videolist extends Component {
           <Slide
             fetchSongId={this.getSongData}
             data={this.state.hollywood}
-            title={"Boris Brejha"}
+            title={"Boris Brejcha"}
           />
 
           <br></br>

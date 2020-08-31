@@ -67,6 +67,7 @@ export default () => {
             </button>
           </div>
         </FormWrapper>
+        <IconWrapper></IconWrapper>
       </ContentWrapper>
       <List searchSongData={searchSongData} />
     </>
@@ -111,3 +112,5 @@ const Head = styled.div``;
 const FormWrapper = styled.div`
   margin-right: 0.7rem;
 `;
+
+const IconWrapper = styled.div``;

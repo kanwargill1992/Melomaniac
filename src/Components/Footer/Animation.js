@@ -17,6 +17,10 @@ export default () => {
     "House",
     "EDM",
     "Hip Hop",
+    "Boris Brejcha",
+    "Adam Bayer",
+    "Armin V Burren",
+    "Above and Beyond",
   ];
 
   const [current, setCurrent] = useState(0);
