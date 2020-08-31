@@ -191,34 +191,6 @@ export default class videolist extends Component {
                         </div>
                       </div>
                     </div>
-                    {/* <div className="wrapper">
-                      
-                      <div className="main_card">
-                        <img src={ob.imgUrl} className="card-img-top" />
-                      </div>
-
-                      
-                      <div className="card-body">
-                        
-                        <h6 className="card-title" style={{ fontWeight: 600 }}>
-                          {ob.title}
-                        </h6>
-                       
-                      </div>
-
-                      <button
-                        className="btn "
-                        style={{
-                          width: "50%",
-                          alignSelf: "center",
-                          backgroundColor: "#3F51B5",
-                          color: "#fff",
-                        }}
-                        onClick={() => this.getSongData(ob.id, ob.title)}
-                      >
-                        Play
-                      </button>
-                    </div> */}
                   </CardWrapper>
                 ))}
               </div>
@@ -284,12 +256,7 @@ export default class videolist extends Component {
               left: "50%",
             }}
           >
-            {/* <div
-              class="spinner-border"
-              role="status"
-              style={{ height: "2em", width: "2em" }}
-            ></div> */}
-            <Loader type="audio" color="#00BFFF" height={80} width={80} />
+            <Loader type="audio" color="#ec407a" height={80} width={80} />
           </div>
         ) : (
           <div></div>
@@ -299,32 +266,6 @@ export default class videolist extends Component {
   }
 }
 
-// export default () => {
-//   const [popular, setPopular] = useState([]);
-//   const [bollywood, setBollywood] = useState([]);
-//   const [hollywood, setHollywood] = useState([]);
-//   const [gazal, setGazal] = useState([]);
-//   const [playerSongUrl, setPlayerSongUrl] = useState("");
-//   const [playerSongTitle, setPlayerSongTitle] = useState("");
-//   const [playsong, setPlaysong] = useState(false);
-//   const [loading, setLoading] = useState(false);
-
-//   const getPopular = async () => {
-//     let trendingList = await getPopularList();
-//     console.log(trendingList);
-//     const data = [];
-//     await trendingList.map((ob) => {
-//       data.push({
-//         id: ob.id,
-//         title: ob.title,
-//         imgurl: ob.thumbnails.high.url,
-//       });
-//     });
-//     await setPopular(data);
-//   };
-//   getPopular();
-//   return <div>Hello</div>;
-// };
 const CardWrapper = styled.div`
   width: 20rem;
   display: grid;

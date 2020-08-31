@@ -63,7 +63,7 @@ export default class slides extends Component {
         <div>
           <h4
             style={{
-              borderBottom: "#00BFFF solid 5px ",
+              // borderBottom: "#00BFFF solid 5px ",
               display: "inline-block",
               padding: 3,
             }}
@@ -116,9 +116,9 @@ export default class slides extends Component {
             ))}
           </Slicker>
         ) : (
-          <div>
-            <Loader type="Audio" color="#92fe9d" height={80} width={80} />
-          </div>
+          <LoadWrapper>
+            <Loader type="Audio" color="#ec407a" height={80} width={80} />
+          </LoadWrapper>
         )}
       </Wrapper>
     );
@@ -157,4 +157,10 @@ const Img = styled.img`
 
 const CardWrapper = styled.div`
   width: 20rem;
+`;
+
+const LoadWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

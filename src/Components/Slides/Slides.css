@@ -1,18 +1,3 @@
-/* @media only screen and (min-width: 600px) {
-  div.popular {
-    height: 430px;
-    text-align: center;
-  }
-} */
-/* 
-@media only screen and (min-width: 400px) {
-  div.popular {
-    height: 460px;
-    text-align: center;
-  }
-} */
-
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 400px) {
   div.popular {
     height: 530px;
@@ -68,17 +53,17 @@
   display: flex;
   /* max-width: 770px; */
   background: #00c9ff;
-  background: -webkit-linear-gradient(to right, #92fe9d, #00c9ff);
+  background: -webkit-linear-gradient(to right, #ec407a, #00c9ff);
   background: -webkit-gradient(
     linear,
     left top,
     right top,
-    from(#92fe9d),
+    from(#ec407a),
     to(#00c9ff)
   );
-  background: -webkit-linear-gradient(left, #92fe9d, #00c9ff);
-  background: -o-linear-gradient(left, #92fe9d, #00c9ff);
-  background: linear-gradient(to right, #92fe9d, #00c9ff);
+  background: -webkit-linear-gradient(left, #ec407a, #00c9ff);
+  background: -o-linear-gradient(left, #ec407a, #00c9ff);
+  background: linear-gradient(to right, #ec407a, #00c9ff);
   -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -115,7 +100,7 @@
 }
 
 .PG {
-  background: #92fe9d;
+  background: #ec407a;
   -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
   transition: 300ms ease-in-out;
@@ -141,7 +126,7 @@ button {
   font-size: 12px;
   margin-top: 30px;
   margin-left: 10px;
-  background: #92fe9d;
+  background: #ec407a;
   border-radius: 12px;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);

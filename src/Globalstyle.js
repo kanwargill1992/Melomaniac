@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     list-style-type: none;
   }
 
-  button {
+  /* button {
     border: 1px solid #ccc;
     background: none;
     padding: 12px 10px;
@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
       background: #00c9ff;
       color: white;
     }
-  }
+  } */
 `;
 
 export default GlobalStyle;

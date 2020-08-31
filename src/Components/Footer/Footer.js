@@ -1,16 +1,30 @@
 import React from "react";
 import styled from "styled-components";
+import Animation from "./Animation";
+import { AiFillGithub } from "react-icons/ai";
 
 export default () => {
   return (
     <Footer>
-      <h1>Kanwar Gill</h1>
+      <FootWrapper>
+        <Animation />
+      </FootWrapper>
+      <div>hello</div>
+      <AiFillGithub />
     </Footer>
   );
 };
 
 const Footer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 7vh;
+  background-color: #ec407a;
+  width: 100%;
+`;
+
+const FootWrapper = styled.div`
+  margin-left: 0.7rem;
+  margin-top: 0.5rem;
 `;

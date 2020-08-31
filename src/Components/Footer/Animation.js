@@ -1,5 +1,6 @@
 import React, { useState, useLayoutEffect, useRef } from "react";
-import { AnimateOnChange, HideUntilLoaded } from "react-animation";
+import { AnimateOnChange } from "react-animation";
+import styled from "styled-components";
 import "./Animation.css";
 
 export default () => {
@@ -7,12 +8,14 @@ export default () => {
     "Maniac",
     "Techno",
     "Trance",
-    "Eric Prydz",
+    "Ciraz",
     "Pryda",
     "Anna",
-    "Tech House",
-    "Minimal House",
+    "Tech",
+    "Minimal",
     "House",
+    "EDM",
+    "Hip Hop",
   ];
 
   const [current, setCurrent] = useState(0);
@@ -53,22 +56,62 @@ export default () => {
     <div>
       <h1>
         Melo{" "}
-        <AnimateOnChange className="foo" durationOut={500}>
-          <div
+        <AnimateOnChange durationOut={500}>
+          <Wrapper
             className="container"
             style={{ width: currentWidth ? currentWidth + "px" : "auto" }}
           >
-            <div
+            <WordWrapper
               className="text-width-wrapper"
               style={currentTextStyle}
               ref={currentTextRef}
             >
               {words[current]}
-            </div>
-          </div>
+            </WordWrapper>
+          </Wrapper>
         </AnimateOnChange>
       </h1>
       <h1 className="hidden-text" ref={nextTextRef} />
     </div>
   );
 };
+
+const Wrapper = styled.div`
+  /* width: 30px; */
+
+  .container {
+    display: inline-block;
+    position: relative;
+    padding: 5px 8px;
+    transition: all 200ms cubic-bezier(0.2, 1, 0.2, 1);
+
+    &:after {
+      z-index: 100;
+      background-color: #fff;
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 100%;
+      bottom: 2px;
+      left: 0;
+      transition: all cubic-bezier(0.2, 1, 0.2, 1) 500ms 250ms;
+    }
+  }
+
+  &.foo-out {
+    .container:after {
+      right: 0;
+      transition: all cubic-bezier(0.5, -0.5, 0.25, 1.5) 500ms;
+    }
+  }
+`;
+
+const WordWrapper = styled.div`
+  display: inline-block;
+`;
+
+const Head = styled.h1`
+  position: absolute;
+  top: -999px;
+  left: -999px;
+`;
