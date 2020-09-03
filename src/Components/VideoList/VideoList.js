@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 import {
-  getPopularList,
-  getBollywoodLongSongs,
-  getHollywoodSongs,
-  getGhazalList,
+  getTechnoList,
+  getEricSongs,
+  getBorisSongs,
+  getHouseList,
 } from "../API/Youtube";
 import { AiFillPlayCircle } from "react-icons/ai";
 import Slide from "../Slides/Slides";
@@ -19,10 +19,10 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default class videolist extends Component {
   state = {
-    popular: [],
-    bollywood: [],
-    hollywood: [],
-    gazal: [],
+    techno: [],
+    eric: [],
+    boris: [],
+    house: [],
     playerSongUrl: "",
     playerSongTitle: "",
     playsong: false,
@@ -44,7 +44,7 @@ export default class videolist extends Component {
   };
 
   getPopularList = async () => {
-    var trendingList = await getPopularList();
+    var trendingList = await getTechnoList();
     console.log(trendingList);
     const data = [];
 
@@ -56,11 +56,11 @@ export default class videolist extends Component {
       });
     });
 
-    await this.setState({ popular: data });
+    await this.setState({ techno: data });
   };
 
   getBollywoodBunchSongs = async () => {
-    const list = await getBollywoodLongSongs();
+    const list = await getEricSongs();
     console.log(list);
     const data = [];
 
@@ -72,11 +72,11 @@ export default class videolist extends Component {
       });
     });
 
-    await this.setState({ bollywood: data });
+    await this.setState({ eric: data });
   };
 
   getHollywoodSongs = async () => {
-    const list = await getHollywoodSongs();
+    const list = await getBorisSongs();
 
     const data = [];
 
@@ -88,11 +88,11 @@ export default class videolist extends Component {
       });
     });
 
-    await this.setState({ hollywood: data });
+    await this.setState({ boris: data });
   };
 
   getGazals = async () => {
-    var list = await getGhazalList();
+    var list = await getHouseList();
 
     const data = [];
 
@@ -104,7 +104,7 @@ export default class videolist extends Component {
       });
     });
 
-    await this.setState({ gazal: data });
+    await this.setState({ house: data });
   };
 
   getSongData = async (songId, title) => {
@@ -250,7 +250,7 @@ export default class videolist extends Component {
           )}
           <Slide
             fetchSongId={this.getSongData}
-            data={this.state.popular}
+            data={this.state.techno}
             title={"Techno"}
           />
 
@@ -258,7 +258,7 @@ export default class videolist extends Component {
           <br></br>
           <Slide
             fetchSongId={this.getSongData}
-            data={this.state.bollywood}
+            data={this.state.eric}
             title={"Eric Prydz"}
           />
 
@@ -267,7 +267,7 @@ export default class videolist extends Component {
 
           <Slide
             fetchSongId={this.getSongData}
-            data={this.state.hollywood}
+            data={this.state.boris}
             title={"Boris Brejcha"}
           />
 
@@ -276,7 +276,7 @@ export default class videolist extends Component {
 
           <Slide
             fetchSongId={this.getSongData}
-            data={this.state.gazal}
+            data={this.state.house}
             title={"Tech House"}
           />
 
