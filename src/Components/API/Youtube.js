@@ -1,6 +1,6 @@
 import youtubeSearch from "simple-youtube-api";
 
-const API_KEY = process.env.YOU_TUBE_API;
+const API_KEY = "AIzaSyCLcupFcD0r3cnej5i-JSKozCoqVkkel1E";
 
 export const getTechnoList = async () => {
   const ob = new youtubeSearch(API_KEY);

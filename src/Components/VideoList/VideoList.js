@@ -31,10 +31,10 @@ export default class videolist extends Component {
 
   componentDidMount = async () => {
     try {
-      await this.getPopularList();
-      await this.getBollywoodBunchSongs();
-      await this.getHollywoodSongs();
-      await this.getGazals();
+      await this.getPList();
+      await this.getBSongs();
+      await this.getHSongs();
+      await this.getG();
     } catch (e) {
       setTimeout(() => {
         window.location.reload();
@@ -43,7 +43,7 @@ export default class videolist extends Component {
     }
   };
 
-  getPopularList = async () => {
+  getPList = async () => {
     var trendingList = await getTechnoList();
     console.log(trendingList);
     const data = [];
@@ -59,7 +59,7 @@ export default class videolist extends Component {
     await this.setState({ techno: data });
   };
 
-  getBollywoodBunchSongs = async () => {
+  getBSongs = async () => {
     const list = await getEricSongs();
     console.log(list);
     const data = [];
@@ -75,7 +75,7 @@ export default class videolist extends Component {
     await this.setState({ eric: data });
   };
 
-  getHollywoodSongs = async () => {
+  getHSongs = async () => {
     const list = await getBorisSongs();
 
     const data = [];
@@ -91,7 +91,7 @@ export default class videolist extends Component {
     await this.setState({ boris: data });
   };
 
-  getGazals = async () => {
+  getG = async () => {
     var list = await getHouseList();
 
     const data = [];
